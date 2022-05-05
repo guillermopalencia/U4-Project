@@ -29,9 +29,9 @@
 
 ##### Cantibile will revolutionize the way you listen to music.
 
-##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/gsw7XYk5/project-2-rap-garden).
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/vSKbBXW1/project-4-cantibile).
 
-##### The project itself was deployed and can be viewed [here](https://cherry-crumble-36177.herokuapp.com/). to add.
+##### The project itself was deployed and can be viewed [here](). to add.
 
 ---
 
