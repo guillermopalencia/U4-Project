@@ -8,7 +8,7 @@
 
 ---
 
-### **For__Your__Listning_Pleasure**
+### **For__Your__Listening__Pleasure**
 
 #### Cantabile is an online music streaming platform built for those who have a love of music.
 
