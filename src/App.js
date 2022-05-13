@@ -13,8 +13,9 @@ function App() {
 
   useEffect(() => {
     setToken(urlSearch.get('access_token'))
-  }, [])
-  console.log(token)
+    window.localStorage.setItem('token', token)
+    console.log(token)
+  })
 
   const logout = () => {
     setToken('')
