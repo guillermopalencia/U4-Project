@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ArtistCard from './ArtistCard'
+import TrackCard from './TrackCard'
 
 const SearchPage = () => {
   const [search, setSearch] = useState('')
@@ -35,27 +36,6 @@ const SearchPage = () => {
     console.log(tracks)
   }
 
-  // let artistList = artists
-  //   ? artists.map((artist) => (
-  //       <div key={artist.id}>
-  //         <h1>{artist.name}</h1>
-  //         {artist.images.length ? (
-  //           <img width="300" src={artist.images[0].url} alt="" />
-  //         ) : null}
-  //       </div>
-  //     ))
-  //   : null
-
-  let trackList = tracks
-    ? tracks.map((track) => (
-        <div key={track.id}>
-          <img width="80" src={track.album.images[0].url} />
-          <h1>{track.name}</h1>
-          <h3>{track.album.artists.name}</h3>
-        </div>
-      ))
-    : null
-
   return (
     <div>
       <h1 className="searchtitle">Discover Anime</h1>
@@ -71,10 +51,12 @@ const SearchPage = () => {
           ></input>
           <button className="searchbutton" type="submit"></button>
         </form>
-        <div className="artistContainer">
+        <div className="searchResultsContainer">
           <h1>Top Result</h1>
           <ArtistCard artists={artists} />
-          <div>{trackList}</div>
+          <div>
+            <TrackCard tracks={tracks} />
+          </div>
         </div>
       </div>
     </div>
