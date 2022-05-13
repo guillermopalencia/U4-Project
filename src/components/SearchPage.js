@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ArtistCard from './ArtistCard'
-// import { Search } from '../resources'
 
 const SearchPage = () => {
   const [search, setSearch] = useState('')
@@ -36,21 +35,23 @@ const SearchPage = () => {
     console.log(tracks)
   }
 
-  let artistList = artists
-    ? artists.map((artist) => (
-        <div key={artist.id}>
-          <h1>{artist.name}</h1>
-          {artist.images.length ? (
-            <img width="300" src={artist.images[0].url} alt="" />
-          ) : null}
-        </div>
-      ))
-    : null
+  // let artistList = artists
+  //   ? artists.map((artist) => (
+  //       <div key={artist.id}>
+  //         <h1>{artist.name}</h1>
+  //         {artist.images.length ? (
+  //           <img width="300" src={artist.images[0].url} alt="" />
+  //         ) : null}
+  //       </div>
+  //     ))
+  //   : null
 
   let trackList = tracks
     ? tracks.map((track) => (
         <div key={track.id}>
+          <img width="80" src={track.album.images[0].url} />
           <h1>{track.name}</h1>
+          <h3>{track.album.artists.name}</h3>
         </div>
       ))
     : null
@@ -72,7 +73,7 @@ const SearchPage = () => {
         </form>
         <div className="artistContainer">
           <h1>Top Result</h1>
-          <div>{artistList[0]}</div>
+          <ArtistCard artists={artists} />
           <div>{trackList}</div>
         </div>
       </div>

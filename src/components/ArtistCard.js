@@ -1,14 +1,18 @@
-// import React from 'react'
+import React from 'react'
 
-// const ArtistCard = ({}) => {
-//   return (
-//     <div>
-//       <h1>{artist.name}</h1>
-//       <div>
-//         <img src={artist.image} />
-//       </div>
-//     </div>
-//   )
-// }
+const ArtistCard = ({ artists }) => {
+  let artistList = artists
+    ? artists.map((artist) => (
+        <div key={artist.id}>
+          <h1>{artist.name}</h1>
+          {artist.images.length ? (
+            <img width="300" src={artist.images[0].url} alt="" />
+          ) : null}
+        </div>
+      ))
+    : null
 
-// export default ArtistCard
+  return <div>{artistList[0]}</div>
+}
+
+export default ArtistCard
