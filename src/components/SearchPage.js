@@ -1,26 +1,40 @@
 import React from 'react'
-import { useState } from 'react'
-import { Search } from '../resource'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+// import { Search } from '../resources'
 
 const SearchPage = () => {
   const [search, setSearch] = useState('')
   const [searchResults, setSearchResults] = useState([])
+  const [token, setToken] = useState('')
 
   const onChange = (e) => {
     setSearch(e.target.value)
   }
 
-  const onSubmit = (e) => {
+  useEffect(() => {
+    setToken(window.localStorage.getItem('token'))
+  })
+
+  const Search = async (e) => {
     e.preventDefault()
-    Search(setSearchResults, search)
-    console.log(searchResults)
+    const { data } = await axios.get('https://api.spotify.com/v1/search', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      params: {
+        query: search,
+        type: 'track,artist'
+      }
+    })
+    setSearchResults(data)
   }
 
   return (
     <div>
       <h1 className="searchtitle">Discover Anime</h1>
       <div className="searchcontainer">
-        <form className="searchform" onSubmit={onSubmit}>
+        <form className="searchform" onSubmit={Search}>
           <input
             className="searchinput"
             type="text"

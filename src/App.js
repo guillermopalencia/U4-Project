@@ -1,5 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react'
+import SearchPage from './components/SearchPage'
 
 function App() {
   const CLIENT_ID = '183f5935087c4ce685d71e8467ce5711'
@@ -35,6 +36,7 @@ function App() {
         ) : (
           <button onClick={logout}>logout</button>
         )}
+        {token ? <SearchPage /> : <h1>Null</h1>}
       </header>
     </div>
   )
