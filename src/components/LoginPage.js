@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import NavBar from './NavBar'
 import SearchPage from './SearchPage'
 
 const Login = () => {
@@ -15,7 +16,7 @@ const Login = () => {
     setToken(urlSearch.get('access_token'))
     window.localStorage.setItem('token', token)
     console.log(token)
-  })
+  }, [token])
 
   const logout = () => {
     setToken('')
@@ -32,9 +33,7 @@ const Login = () => {
           >
             Login Via Spotify
           </a>
-        ) : (
-          <button onClick={logout}>logout</button>
-        )}
+        ) : null}
         {token ? <SearchPage /> : <h1>Null</h1>}
       </header>
     </div>
