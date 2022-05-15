@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Home from './HomePage'
 import NavBar from './NavBar'
 import SearchPage from './SearchPage'
 
@@ -36,7 +37,7 @@ const Login = () => {
             Login Via Spotify
           </a>
         ) : null}
-        {token ? <SearchPage /> : <h1>Null</h1>}
+        {token ? <Home /> : <h1>Null</h1>}
       </header>
     </div>
   )
