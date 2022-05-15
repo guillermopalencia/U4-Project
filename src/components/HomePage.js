@@ -4,6 +4,7 @@ import { getGenre, getLikedTracks, getPlaylists } from '../resources'
 import GenreCard from './GenreCard'
 import ArtistCard from './ArtistCard'
 import LikedTracksCard from './LikedTracks'
+import PlaylistCard from './PlaylistCard'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
@@ -19,30 +20,19 @@ const Home = () => {
   }, [])
   console.log(playlists)
 
-  // const Genre = async (callback) => {
-  //   const data = await axios.get(
-  //     'https://api.spotify.com/v1/recommendations/available-genre-seeds',
-  //     {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`
-  //       },
-  //       params: {
-  //         genres: 'rap'
-  //       }
-  //     }
-  //   )
-  //   callback(data.data)
-  // }
   return (
     <div className="mainContainer">
+      <div className="headerContainer">
+        <h2 className="playlistHeader">Your Playlists</h2>
+      </div>
       <div>
-        <h1>Welcome to Cantabile</h1>
-        <div>
+        <PlaylistCard playlists={playlists} />
+      </div>
+      {/* <div>
           <GenreCard genres={genres} />
-        </div>
-        <div>
-          <LikedTracksCard likedTracks={songs} />
-        </div>
+        </div> */}
+      <div>
+        <LikedTracksCard likedTracks={songs} />
       </div>
     </div>
   )

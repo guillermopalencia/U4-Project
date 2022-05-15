@@ -6,10 +6,16 @@ import Home from './components/HomePage'
 import NavBar from './components/NavBar'
 
 function App() {
+  const [token, setToken] = useState([])
+
+  useEffect(() => {
+    setToken(localStorage.getItem('token'))
+  })
+
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar />
+        {token === 'null' ? null : <NavBar />}
         <div>
           <Routes>
             <Route path="/" element={<Login />} />

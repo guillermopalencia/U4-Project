@@ -15,11 +15,23 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
-      <NavLink className="nav" to="/home">
+      <NavLink
+        className="nav"
+        to="/home"
+        style={({ isActive }) =>
+          isActive ? { color: 'goldenrod' } : { color: 'white' }
+        }
+      >
         Home
       </NavLink>
 
-      <NavLink className="nav" to="/search">
+      <NavLink
+        className="nav"
+        to="/search"
+        style={({ isActive }) =>
+          isActive ? { color: 'goldenrod' } : { color: 'white' }
+        }
+      >
         Search
       </NavLink>
     </div>

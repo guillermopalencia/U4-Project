@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Home from './HomePage'
 import NavBar from './NavBar'
 import SearchPage from './SearchPage'
+import { useNavigate } from 'react-router'
 
 const Login = () => {
   const CLIENT_ID = '183f5935087c4ce685d71e8467ce5711'
@@ -26,6 +27,12 @@ const Login = () => {
     window.localStorage.removeItem('token')
   }
 
+  let navigate = useNavigate('')
+  const redirect = () => {
+    navigate('/home')
+    window.location.reload()
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -37,7 +44,7 @@ const Login = () => {
             Login Via Spotify
           </a>
         ) : null}
-        {token ? <Home /> : <h1>Null</h1>}
+        {token ? redirect() : null}
       </header>
     </div>
   )
