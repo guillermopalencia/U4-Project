@@ -22,11 +22,13 @@ const Home = () => {
 
   return (
     <div className="mainContainer">
-      <div className="headerContainer">
-        <h2 className="playlistHeader">Your Playlists</h2>
-      </div>
-      <div>
-        <PlaylistCard playlists={playlists} />
+      <div className="backdrop">
+        <div className="headerContainer">
+          <h3 className="playlistHeader">Your Playlists</h3>
+          <div className="playlist">
+            <PlaylistCard playlists={playlists} />
+          </div>
+        </div>
       </div>
       {/* <div>
           <GenreCard genres={genres} />
