@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { getGenre } from '../resources'
+import { getGenre, getLikedTracks } from '../resources'
+import GenreCard from './GenreCard'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
   const [token, setToken] = useState([])
+  const [songs, setSongs] = useState([])
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
     getGenre(setGenres)
+    getLikedTracks(setSongs)
   }, [])
+  console.log(genres)
+  console.log(songs)
 
   // const Genre = async (callback) => {
   //   const data = await axios.get(
@@ -29,7 +34,9 @@ const Home = () => {
     <div className="mainContainer">
       <div>
         <h1>Welcome to Cantabile</h1>
-        <div></div>
+        <div>
+          <GenreCard genres={genres} />
+        </div>
       </div>
     </div>
   )
