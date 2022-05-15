@@ -113,13 +113,19 @@ code {
   background-color: #111; 
   overflow-x: hidden; 
   padding-top: 60px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
 }
 
 .nav {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
+  margin: auto;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
 }
