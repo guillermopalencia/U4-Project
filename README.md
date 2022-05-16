@@ -8,7 +8,7 @@
 
 ---
 
-### **__For__Your__Listening__Pleasure__**
+### **__For Your Listening Pleasure__**
 
 #### Cantabile is an online music streaming platform built for those who have a love of music. Utilizing spoitfy api you are able to use the app as pretty much a spotify clone.
 
@@ -46,7 +46,7 @@
 ---
 
 ### **_Future Updates_**
-#####After completing this project here are some features to add.
+##### After completing this project here are some features to add.
 - music playback
 - display album details
 - finish search page
