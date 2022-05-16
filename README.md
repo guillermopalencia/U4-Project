@@ -46,11 +46,11 @@
 ---
 
 ### **_Future Updates_**
-After completing this project here are some features to add.
--music playback
--display album details
--finish search page
--custom playback bar
+#####After completing this project here are some features to add.
+- music playback
+- display album details
+- finish search page
+- custom playback bar
 ---
 
 ### **_Credits_**
