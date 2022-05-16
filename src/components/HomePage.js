@@ -4,7 +4,8 @@ import {
   getGenre,
   getLikedTracks,
   getPlaylists,
-  getPlaybackState
+  getPlaybackState,
+  startPlayback
 } from '../resources'
 import GenreCard from './GenreCard'
 import ArtistCard from './ArtistCard'
@@ -17,6 +18,7 @@ const Home = () => {
   const [songs, setSongs] = useState([])
   const [playlists, setPlaylists] = useState([])
   const [playbackState, setPlaybackState] = useState([])
+  const [playing, setPlaying] = useState([])
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
@@ -25,7 +27,7 @@ const Home = () => {
     getPlaylists(setPlaylists)
     getPlaybackState(setPlaybackState)
   }, [])
-  console.log(playbackState)
+  console.log(songs)
 
   return (
     <div className="mainContainer">

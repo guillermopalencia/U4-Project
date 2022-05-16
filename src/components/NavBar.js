@@ -17,12 +17,11 @@ const NavBar = () => {
 
   useEffect(() => {
     getUserProfile(setUser)
-  })
-  console.log(user)
+  }, [])
 
   return (
     <div className="navbar">
-      <h2 className="nav">{user}</h2>
+      <h2 className="nav">{user.display_name}</h2>
       <NavLink
         className="nav"
         to="/home"
@@ -41,6 +40,15 @@ const NavBar = () => {
         }
       >
         Search
+      </NavLink>
+      <NavLink
+        className="nav"
+        to={`/newplaylist/${user.id}`}
+        style={({ isActive }) =>
+          isActive ? { color: 'goldenrod' } : { color: 'white' }
+        }
+      >
+        Create Playlist
       </NavLink>
     </div>
   )

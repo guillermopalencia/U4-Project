@@ -53,7 +53,7 @@ const getUserProfile = async (callback) => {
       Authorization: `Bearer ${token}`
     }
   })
-  callback(data.data.display_name)
+  callback(data.data)
 }
 
 const getPlaybackState = async (callback) => {
@@ -65,10 +65,13 @@ const getPlaybackState = async (callback) => {
   callback(data.data)
 }
 
-const startPlayback = async (callback) => {
+const startPlayback = async (callback, uri) => {
   const data = await axios.put('https://api.spotify.com/v1/me/player/play', {
     headers: {
       Authorization: `Bearer ${token}`
+    },
+    params: {
+      context_uri: `${uri}`
     }
   })
   callback(data)

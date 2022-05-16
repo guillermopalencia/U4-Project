@@ -10,7 +10,7 @@ const Login = () => {
   const AUTH_BASE_URL = 'https://accounts.spotify.com/authorize?'
   const RESPONSE_TYPE = 'token'
   const SCOPES =
-    'streaming user-read-email user-read-private user-library-read user-library-modify user-read-playback-state user-modify-playback-state'
+    'streaming user-read-email user-read-private user-library-read user-library-modify user-read-playback-state user-modify-playback-state playlist-modify-private playlist-modify-public'
 
   const [token, setToken] = useState('')
 
