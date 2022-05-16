@@ -8,15 +8,15 @@
 
 ---
 
-### **For__Your__Listening__Pleasure**
+### **__For__Your__Listening__Pleasure__**
 
-#### Cantabile is an online music streaming platform built for those who have a love of music.
+#### Cantabile is an online music streaming platform built for those who have a love of music. Utilizing spoitfy api you are able to use the app as pretty much a spotify clone.
 
 ---
 
 ### **_Technologies Used_**
 
-- MongoDB
+- Postgres
 - JavaScript
 - React
   -React Router
@@ -46,11 +46,17 @@
 ---
 
 ### **_Future Updates_**
-
+After completing this project here are some features to add.
+-music playback
+-display album details
+-finish search page
+-custom playback bar
 ---
 
 ### **_Credits_**
-
+-https://developer.spotify.com/documentation/web-api/reference/#/
+-https://developer.spotify.com/documentation/general/guides/authorization/
+-https://github.com/spotify/web-api-auth-examples
 
 
 ---
