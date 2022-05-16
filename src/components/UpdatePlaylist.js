@@ -2,18 +2,16 @@ import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useParams } from 'react-router'
-import { getUserProfile } from '../resources'
 import { useNavigate } from 'react-router'
 
 const UpdatePlaylist = () => {
   const [name, setName] = useState([])
   const [token, setToken] = useState([])
-  const { id } = useParams
+  const { id } = useParams()
   const navigate = useNavigate()
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
-    updatePlaylist()
   }, [])
 
   const nav = () => {
