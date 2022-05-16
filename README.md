@@ -57,9 +57,9 @@
 ---
 
 ### **_Credits_**
--https://developer.spotify.com/documentation/web-api/reference/#/
--https://developer.spotify.com/documentation/general/guides/authorization/
--https://github.com/spotify/web-api-auth-examples
+[SpotifyApi](https://developer.spotify.com/documentation/web-api/reference/#/)
+[SpotifyAPIAuth](https://developer.spotify.com/documentation/general/guides/authorization/)
+[SpotifyAPIDocs](https://github.com/spotify/web-api-auth-examples)
 
 
 ---
