@@ -37,7 +37,9 @@
 
 ### **_Screenshots_**
 
-[Cantabile]('https://i.imgur.com/iTfclTq.png')
+##### Cantabile
+
+<img src="https://i.imgur.com/iTfclTq.png" alt="Home Page"/>
 
 
 ##### First Directory
