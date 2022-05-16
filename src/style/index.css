@@ -6,10 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  
+  background-color: #282c34;
 }
 
 .App {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,8 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4-690x518.png');
+  background-size: cover;
 }
 
 code {
@@ -242,4 +245,8 @@ text-overflow: ellipsis;
   text-decoration: none;
   padding: 15px;
   border-radius: 5%;
+}
+
+.gradient {
+  background-image: url('https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4-690x518.png');
 }

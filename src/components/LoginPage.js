@@ -36,7 +36,8 @@ const Login = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Cantabile</h1>
+        <h1>Welcome to Cantabile</h1>
+        <p>Your first choice for Music</p>
         {!token ? (
           <a
             className="spotify"
@@ -45,6 +46,7 @@ const Login = () => {
             Login Via Spotify
           </a>
         ) : null}
+        <div className="gradient"></div>
         {token ? redirect() : null}
       </header>
     </div>
