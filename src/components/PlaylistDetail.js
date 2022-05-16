@@ -21,17 +21,17 @@ const PlaylistDetail = () => {
     callback(data.data.items)
   }
 
-  // const deletePlaylist = async (callback) => {
-  //   const data = await axios.get(
-  //     `https://api.spotify.com/v1/playlists/${id}/followers`,
-  //     {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`
-  //       }
-  //     }
-  //   )
-  //   callback(data)
-  // }
+  const deletePlaylist = async (callback) => {
+    const data = await axios.get(
+      `https://api.spotify.com/v1/playlists/${id}/followers`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    )
+    callback(data)
+  }
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
@@ -56,6 +56,23 @@ const PlaylistDetail = () => {
   //     config
   //   )
   // }
+
+  let trackList = tracks
+    ? tracks.map((track) => (
+        <div key={track.track.id} className="trackCard">
+          <img
+            className="trackImage"
+            width="200"
+            height="auto"
+            src={track.track.album.images[0].url}
+          />
+          <div className="trackInfo">
+            <h1>{track.track.name}</h1>
+            <h3>{track.track.album.artists.name}</h3>
+          </div>
+        </div>
+      ))
+    : null
 
   return (
     <div className="mainContainer">
