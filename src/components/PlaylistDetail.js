@@ -22,7 +22,7 @@ const PlaylistDetail = () => {
   }
 
   const deletePlaylist = async (callback) => {
-    const data = await axios.get(
+    const data = await axios.delete(
       `https://api.spotify.com/v1/playlists/${id}/followers`,
       {
         headers: {
@@ -76,7 +76,7 @@ const PlaylistDetail = () => {
 
   return (
     <div className="mainContainer">
-      <button>Delete Playlist</button>
+      <button onClick={deletePlaylist}>Delete Playlist</button>
       <div className="trackContainer">{trackList}</div>
     </div>
   )
