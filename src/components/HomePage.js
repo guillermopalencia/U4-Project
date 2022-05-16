@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { getGenre, getLikedTracks, getPlaylists } from '../resources'
+import {
+  getGenre,
+  getLikedTracks,
+  getPlaylists,
+  getPlaybackState
+} from '../resources'
 import GenreCard from './GenreCard'
 import ArtistCard from './ArtistCard'
 import LikedTracksCard from './LikedTracks'
@@ -11,14 +16,16 @@ const Home = () => {
   const [token, setToken] = useState([])
   const [songs, setSongs] = useState([])
   const [playlists, setPlaylists] = useState([])
+  const [playbackState, setPlaybackState] = useState([])
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
     getGenre(setGenres)
     getLikedTracks(setSongs)
     getPlaylists(setPlaylists)
+    getPlaybackState(setPlaybackState)
   }, [])
-  console.log(songs)
+  console.log(playbackState)
 
   return (
     <div className="mainContainer">

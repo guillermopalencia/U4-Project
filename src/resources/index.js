@@ -60,9 +60,15 @@ const getPlaybackState = async (callback) => {
   const data = await axios.get('https://api.spotify.com/v1/me/player', {
     headers: {
       Authorization: `Bearer ${token}`
-    },
-    params: {
-      additional_types: 'tracks'
+    }
+  })
+  callback(data.data)
+}
+
+const startPlayback = async (callback) => {
+  const data = await axios.put('https://api.spotify.com/v1/me/player/play', {
+    headers: {
+      Authorization: `Bearer ${token}`
     }
   })
   callback(data)
@@ -73,5 +79,6 @@ export {
   getLikedTracks,
   getPlaylists,
   getUserProfile,
-  getPlaybackState
+  getPlaybackState,
+  startPlayback
 }
