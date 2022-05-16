@@ -5,6 +5,7 @@ import Login from './components/LoginPage'
 import Home from './components/HomePage'
 import NavBar from './components/NavBar'
 import NewPlaylistPage from './components/NewPlaylistPage'
+import PlaylistDetail from './components/PlaylistDetail'
 
 function App() {
   const [token, setToken] = useState([])
@@ -22,6 +23,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/newplaylist/:id" element={<NewPlaylistPage />} />
+          <Route path="/playlist/:id" element={<PlaylistDetail />} />
         </Routes>
       </div>
     </div>
