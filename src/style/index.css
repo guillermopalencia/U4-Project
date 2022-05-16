@@ -36,8 +36,7 @@ code {
 
 .searchResultsConainer {
   display: flex;
-  flex-wrap:wrap-reverse;
-
+  flex-wrap:wrap;
   width: 80vw;
 }
 
