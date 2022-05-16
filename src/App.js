@@ -6,6 +6,7 @@ import Home from './components/HomePage'
 import NavBar from './components/NavBar'
 import NewPlaylistPage from './components/NewPlaylistPage'
 import PlaylistDetail from './components/PlaylistDetail'
+import UpdatePlaylist from './components/UpdatePlaylist'
 
 function App() {
   const [token, setToken] = useState([])
@@ -24,6 +25,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/newplaylist/:id" element={<NewPlaylistPage />} />
           <Route path="/playlist/:id" element={<PlaylistDetail />} />
+          <Route path="/updateplaylist/:id" element={<UpdatePlaylist />} />
         </Routes>
       </div>
     </div>

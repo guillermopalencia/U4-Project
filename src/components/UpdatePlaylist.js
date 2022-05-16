@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router'
 const UpdatePlaylist = () => {
   const [name, setName] = useState([])
   const [token, setToken] = useState([])
+  const { id } = useParams
   const navigate = useNavigate()
 
   useEffect(() => {
