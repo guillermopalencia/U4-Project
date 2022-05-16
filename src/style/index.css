@@ -34,6 +34,7 @@ code {
 .searchResultsConainer {
   display: flex;
   flex-wrap:wrap-reverse;
+
   width: 80vw;
 }
 
@@ -189,7 +190,7 @@ text-overflow: ellipsis;
   width: 15vw;
 height: auto;
 background-color: #000000;
-padding: auto;
+padding: 0;
 padding-top: 1em;
 text-overflow: ellipsis;
 }
@@ -224,8 +225,14 @@ text-overflow: ellipsis;
 }
 
 .searchbutton {
-  margin-right: 5em;
+  /* margin-right: 5em; */
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2pf2eimgvHcdSQ3ZlTRt9vzGN_c3j6e9tHg&usqp=CAU');
   width: 3.8em;
+  height: 3.8em;
   background-size: cover;
+}
+
+.searchform {
+  margin: auto;
+  display: flex;
 }
