@@ -44,6 +44,7 @@
 
 ##### First Directory
 
+<img src="https://i.imgur.com/Qzyw7yN.png" alt="ERD" />
 
 ---
 
