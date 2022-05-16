@@ -26,6 +26,10 @@ const PlaylistDetail = () => {
   const nav = () => {
     navigate('/home')
   }
+
+  const update = () => {
+    navigate(`/updateplaylist/${id}`)
+  }
   const deletePlaylist = async (callback) => {
     const data = await axios.delete(
       `https://api.spotify.com/v1/playlists/${id}/followers`,
@@ -83,6 +87,7 @@ const PlaylistDetail = () => {
   return (
     <div className="mainContainer">
       <button onClick={deletePlaylist}>Delete Playlist</button>
+      <button onClick={update}>Update Playlist</button>
       <div className="trackContainer">{trackList}</div>
     </div>
   )
