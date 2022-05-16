@@ -16,23 +16,6 @@ const NewPlaylistPage = () => {
     getUserProfile(setUser)
   }, [])
 
-  // const createPlaylist = async (e) => {
-  //   e.preventDefault()
-  //   const results = await axios.post(
-  //     `https://api.spotify.com/v1/users/${user.id}/playlists`,
-  //     {
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         Authorization: `Bearer ${token}`
-  //       },
-  //       data: {
-  //         name: `${name}`
-  //       }
-  //     }
-  //   )
-  //   console.log(results)
-  // }
-
   const nav = () => {
     navigate('/home')
   }

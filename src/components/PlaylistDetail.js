@@ -48,25 +48,6 @@ const PlaylistDetail = () => {
     getPlaylistTracks(setTracks)
   }, [getPlaylistTracks])
 
-  // const config = {
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     Authorization: `Bearer ${token}`
-  //   }
-  // }
-
-  // const data = {
-  //   playlist_id: `${id}`
-  // }
-
-  // const getPlaylistTracks = async () => {
-  //   await axios.get(
-  //     `https://api.spotify.com/v1/playlists/${id}/tracks`,
-  //     JSON.stringify(data),
-  //     config
-  //   )
-  // }
-
   let trackList = tracks
     ? tracks.map((track) => (
         <div key={track.track.id} className="trackCard">

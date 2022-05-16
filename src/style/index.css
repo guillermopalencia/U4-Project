@@ -137,7 +137,6 @@ code {
 .backdrop {
   width: 100% ;
   height: 40vh;
-  /* background-color: aqua; */
   margin: auto;
   padding-top: 1em;
   align-self: flex-start;
