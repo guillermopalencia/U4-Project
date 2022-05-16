@@ -3,11 +3,13 @@ import { useParams } from 'react-router'
 import { useState, useEffect } from 'react'
 import TrackCard from './TrackCard'
 import axios from 'axios'
+import { useNavigate } from 'react-router'
 
 const PlaylistDetail = () => {
   const { id } = useParams()
   const [tracks, setTracks] = useState([])
   const [token, setToken] = useState([])
+  const navigate = useNavigate()
 
   const getPlaylistTracks = async (callback) => {
     const data = await axios.get(
@@ -21,6 +23,9 @@ const PlaylistDetail = () => {
     callback(data.data.items)
   }
 
+  const nav = () => {
+    navigate('/home')
+  }
   const deletePlaylist = async (callback) => {
     const data = await axios.delete(
       `https://api.spotify.com/v1/playlists/${id}/followers`,
@@ -30,6 +35,7 @@ const PlaylistDetail = () => {
         }
       }
     )
+    nav()
     callback(data)
   }
 
