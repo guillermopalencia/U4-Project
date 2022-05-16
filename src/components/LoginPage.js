@@ -39,6 +39,7 @@ const Login = () => {
         <h1>Cantabile</h1>
         {!token ? (
           <a
+            className="spotify"
             href={`${AUTH_BASE_URL}client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}
           >
             Login Via Spotify

@@ -236,3 +236,10 @@ text-overflow: ellipsis;
   margin: auto;
   display: flex;
 }
+
+.spotify {
+  background-color: green;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 5%;
+}
