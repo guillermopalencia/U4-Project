@@ -145,3 +145,66 @@ code {
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
   margin-bottom: 1em;
 }
+
+.trackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: 1em;
+  margin: auto;
+  align-content: center;
+  margin-left: 1em;
+}
+
+.trackCard{
+width: 15vw;
+height: auto;
+background-color: #000000;
+padding: auto;
+padding-top: 1em;
+text-overflow: ellipsis;
+}
+
+.trackImage{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border-radius: 2%;
+}
+
+.tracksHeader{
+  text-align: start;
+  margin: 0;
+  margin-left: 1em;
+  margin-bottom: 10px;
+}
+
+.trackInfo {
+  text-align: start;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+
+.artistCard{
+  width: 15vw;
+height: auto;
+background-color: #000000;
+padding: auto;
+padding-top: 1em;
+text-overflow: ellipsis;
+}
+
+.artistInfo{
+  text-align: start;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+
+.artistImage{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border-radius: 50%;
+}

@@ -18,7 +18,7 @@ const Home = () => {
     getLikedTracks(setSongs)
     getPlaylists(setPlaylists)
   }, [])
-  console.log(playlists)
+  console.log(songs)
 
   return (
     <div className="mainContainer">
@@ -30,9 +30,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div>
-          <GenreCard genres={genres} />
-        </div> */}
+      <div>
+        <h3 className="tracksHeader">Liked Songs</h3>
+      </div>
       <div>
         <LikedTracksCard likedTracks={songs} />
       </div>

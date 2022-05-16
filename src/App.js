@@ -14,16 +14,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {token === 'null' ? null : <NavBar />}
-        <div>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/search" element={<SearchPage />} />
-          </Routes>
-        </div>
-      </header>
+      {token === 'null' ? null : <NavBar />}
+      <div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Routes>
+      </div>
     </div>
   )
 }

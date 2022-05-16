@@ -56,4 +56,22 @@ const getUserProfile = async (callback) => {
   callback(data.data.display_name)
 }
 
-export { getGenre, getLikedTracks, getPlaylists, getUserProfile }
+const getPlaybackState = async (callback) => {
+  const data = await axios.get('https://api.spotify.com/v1/me/player', {
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      additional_types: 'tracks'
+    }
+  })
+  callback(data)
+}
+
+export {
+  getGenre,
+  getLikedTracks,
+  getPlaylists,
+  getUserProfile,
+  getPlaybackState
+}

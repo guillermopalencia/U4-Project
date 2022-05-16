@@ -26,7 +26,8 @@ const SearchPage = () => {
       },
       params: {
         query: search,
-        type: 'track,artist'
+        type: 'track,artist',
+        limit: 6
       }
     })
     setArtists(data.artists.items)
@@ -38,7 +39,7 @@ const SearchPage = () => {
 
   return (
     <div>
-      <h1 className="searchtitle">Discover Anime</h1>
+      <h1 className="searchtitle">Discover Music</h1>
       <div className="searchcontainer">
         <form className="searchform" onSubmit={Search}>
           <input

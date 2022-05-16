@@ -3,10 +3,16 @@ import React from 'react'
 const ArtistCard = ({ artists }) => {
   let artistList = artists
     ? artists.map((artist) => (
-        <div key={artist.id}>
+        <div key={artist.id} className="artistCard">
           <h1>{artist.name}</h1>
           {artist.images.length ? (
-            <img width="300" src={artist.images[0].url} alt="" />
+            <img
+              className="artistImage"
+              width="200"
+              height="auto"
+              src={artist.images[0].url}
+              alt=""
+            />
           ) : null}
         </div>
       ))
