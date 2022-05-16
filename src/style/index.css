@@ -222,3 +222,10 @@ text-overflow: ellipsis;
   transition: all 240ms ease-out;
   width: 40vw;
 }
+
+.searchbutton {
+  margin-right: 5em;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2pf2eimgvHcdSQ3ZlTRt9vzGN_c3j6e9tHg&usqp=CAU');
+  width: 3.8em;
+  background-size: cover;
+}

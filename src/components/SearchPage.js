@@ -52,12 +52,12 @@ const SearchPage = () => {
           ></input>
           <button className="searchbutton" type="submit"></button>
         </form>
-        <div className="searchResultsContainer">
-          <h1>Top Result</h1>
-          <ArtistCard artists={artists} />
-          <div>
-            <TrackCard tracks={tracks} />
-          </div>
+      </div>
+      <div className="searchResultsContainer">
+        <h1>Top Result</h1>
+        <ArtistCard artists={artists} />
+        <div>
+          <TrackCard tracks={tracks} />
         </div>
       </div>
     </div>
