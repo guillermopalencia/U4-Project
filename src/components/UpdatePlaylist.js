@@ -30,6 +30,16 @@ const UpdatePlaylist = () => {
     }
   }
 
+  const updatePlaylist = async (e) => {
+    e.preventDefault()
+    await axios.put(
+      `https://api.spotify.com/v1/playlists/${id}`,
+      JSON.stringify(data),
+      config
+    )
+    nav()
+  }
+
   const onChange = (e) => {
     setName(e.target.value)
   }
