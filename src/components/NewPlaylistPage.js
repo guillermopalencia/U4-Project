@@ -3,11 +3,13 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useParams } from 'react-router'
 import { getUserProfile } from '../resources'
+import { useNavigate } from 'react-router'
 
 const NewPlaylistPage = () => {
   const [name, setName] = useState([])
   const [user, setUser] = useState([])
   const [token, setToken] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
@@ -31,6 +33,10 @@ const NewPlaylistPage = () => {
   //   console.log(results)
   // }
 
+  const nav = () => {
+    navigate('/home')
+  }
+
   const data = {
     name: `${name}`
   }
@@ -49,6 +55,7 @@ const NewPlaylistPage = () => {
       JSON.stringify(data),
       config
     )
+    nav()
   }
 
   const onChange = (e) => {
