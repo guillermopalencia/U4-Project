@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react'
-import Home from './HomePage'
-import NavBar from './NavBar'
-import SearchPage from './SearchPage'
 import { useNavigate } from 'react-router'
 
 const Login = () => {
@@ -20,12 +17,12 @@ const Login = () => {
     setToken(urlSearch.get('access_token'))
     window.localStorage.setItem('token', token)
     console.log(token)
-  }, [token])
+  }, [token, urlSearch])
 
-  const logout = () => {
-    setToken('')
-    window.localStorage.removeItem('token')
-  }
+  // const logout = () => {
+  //   setToken('')
+  //   window.localStorage.removeItem('token')
+  // }
 
   let navigate = useNavigate('')
   const redirect = () => {

@@ -7,13 +7,15 @@ const NavBar = () => {
   const [token, setToken] = useState('')
   const [user, setUser] = useState([])
 
+console.log(token)
+
   let navigate = useNavigate()
 
-  const logout = () => {
-    setToken('')
-    window.localStorage.removeItem('token')
-    navigate('/')
-  }
+  // const logout = () => {
+  //   setToken('')
+  //   window.localStorage.removeItem('token')
+  //   navigate('/')
+  // }
 
   useEffect(() => {
     getUserProfile(setUser)

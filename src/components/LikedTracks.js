@@ -10,7 +10,7 @@ const LikedTracksCard = ({ likedTracks }) => {
               width="200"
               height="auto"
               src={track.track.album.images[0].url}
-            />
+            alt="trackimage"/>
           </div>
           <div className="trackInfo">
             <h6>{track.track.name}</h6>

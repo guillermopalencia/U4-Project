@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import {
   getGenre,
   getLikedTracks,
   getPlaylists,
   getPlaybackState,
-  startPlayback
 } from '../resources'
-import GenreCard from './GenreCard'
-import ArtistCard from './ArtistCard'
 import LikedTracksCard from './LikedTracks'
 import PlaylistCard from './PlaylistCard'
 
@@ -18,7 +14,6 @@ const Home = () => {
   const [songs, setSongs] = useState([])
   const [playlists, setPlaylists] = useState([])
   const [playbackState, setPlaybackState] = useState([])
-  const [playing, setPlaying] = useState([])
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
@@ -28,6 +23,7 @@ const Home = () => {
     getPlaybackState(setPlaybackState)
   }, [])
   console.log(songs)
+  console.log(token, playbackState, genres)
 
   return (
     <div className="mainContainer">
