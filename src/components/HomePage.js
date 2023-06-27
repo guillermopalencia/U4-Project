@@ -21,7 +21,7 @@ const Home = () => {
     getLikedTracks(setSongs)
     getPlaylists(setPlaylists)
     getPlaybackState(setPlaybackState)
-  }, [])
+  })
   console.log(songs)
   console.log(token, playbackState, genres)
 
