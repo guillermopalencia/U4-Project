@@ -1,7 +1,7 @@
 name: Testing and Deployment
 on:
   push:
-    branches: - main 
+    branches: main 
 jobs:
   test:
     name: Test
@@ -22,21 +22,11 @@ jobs:
         uses: actions/checkout@v3
       - name: use Node 16
         uses: actions/setup-node@v3
-
-build:
-  name: Build and Deploy
-  needs: test
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: use Node 16
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
-    - name: Install Railway
-      run: npm i -g @railway/cli
-    - name: Deploy
-      run: railway up
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        with:
+          node-version: 16.x
+      - name: Install Railway
+        run: npm i -g @railway/cli
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
