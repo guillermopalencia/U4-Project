@@ -30,18 +30,19 @@ const PlaylistDetail = () => {
     callback(data)
   }
 
-  useEffect(() => {
-    const getPlaylistTracks = async (callback) => {
-      const data = await axios.get(
-        `https://api.spotify.com/v1/playlists/${id}/tracks`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+  const getPlaylistTracks = async (callback) => {
+    const data = await axios.get(
+      `https://api.spotify.com/v1/playlists/${id}/tracks`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
         }
-      )
-      callback(data.data.items)
-    }
+      }
+    )
+    callback(data.data.items)
+  }
+
+  useEffect(() => {
 
     setToken(window.localStorage.getItem('token'))
     getPlaylistTracks(setTracks)

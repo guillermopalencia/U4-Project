@@ -11,8 +11,9 @@ const Login = () => {
 
   const [token, setToken] = useState('')
 
+  const urlSearch = new URLSearchParams(window.location.hash.replace('#', '?'))
+
   useEffect(() => {
-    const urlSearch = new URLSearchParams(window.location.hash.replace('#', '?'))
 
     setToken(urlSearch.get('access_token'))
     window.localStorage.setItem('token', token)

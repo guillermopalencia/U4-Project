@@ -7,7 +7,7 @@ const NavBar = () => {
   // const [token, setToken] = useState('')
   const [user, setUser] = useState([])
 
-console.log(token)
+// console.log(token)
 
   // let navigate = useNavigate()
 
