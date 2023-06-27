@@ -9,7 +9,7 @@ const TrackCard = ({ tracks }) => {
             width="200"
             height="auto"
             src={track.album.images[0].url}
-            alt="trackimage"
+            alt="trackimages"
           />
           <div className="trackInfo">
             <h1>{track.name}</h1>
