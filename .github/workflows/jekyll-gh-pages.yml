@@ -43,7 +43,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      base-url: /src/
+      baseurl: /src/
     runs-on: ubuntu-latest
     needs: build
     steps:
