@@ -4,12 +4,12 @@ import { useState } from 'react'
 import { getUserProfile } from '../resources'
 
 const NavBar = () => {
-  const [token, setToken] = useState('')
+  // const [token, setToken] = useState('')
   const [user, setUser] = useState([])
 
 console.log(token)
 
-  let navigate = useNavigate()
+  // let navigate = useNavigate()
 
   // const logout = () => {
   //   setToken('')

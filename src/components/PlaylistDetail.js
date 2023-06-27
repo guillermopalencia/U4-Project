@@ -10,18 +10,6 @@ const PlaylistDetail = () => {
   const [token, setToken] = useState([])
   const navigate = useNavigate()
 
-  const getPlaylistTracks = async (callback) => {
-    const data = await axios.get(
-      `https://api.spotify.com/v1/playlists/${id}/tracks`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }
-    )
-    callback(data.data.items)
-  }
-
   const nav = () => {
     navigate('/home')
   }
@@ -43,6 +31,18 @@ const PlaylistDetail = () => {
   }
 
   useEffect(() => {
+    const getPlaylistTracks = async (callback) => {
+      const data = await axios.get(
+        `https://api.spotify.com/v1/playlists/${id}/tracks`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      )
+      callback(data.data.items)
+    }
+
     setToken(window.localStorage.getItem('token'))
     getPlaylistTracks(setTracks)
   }, [getPlaylistTracks])
@@ -55,6 +55,7 @@ const PlaylistDetail = () => {
             width="200"
             height="auto"
             src={track.track.album.images[0].url}
+            alt="trackimages"
           />
           <div className="trackInfo">
             <h1>{track.track.name}</h1>
