@@ -32,11 +32,6 @@ jobs:
         CI: ""
     - run: npm test
 
-    permissions:
-      pull-requests: write
-      issues: write
-      repository-projects: write
-
     - name: Deploy with gh-pages
       run: |
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
