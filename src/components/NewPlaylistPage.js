@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import { useParams } from 'react-router'
 import { getUserProfile } from '../resources'
 import { useNavigate } from 'react-router'
 

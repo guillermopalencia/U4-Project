@@ -16,7 +16,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     setToken(window.localStorage.getItem('token'))
-  })
+  }, [])
 
   const Search = async (e) => {
     e.preventDefault()

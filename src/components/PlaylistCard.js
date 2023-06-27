@@ -1,4 +1,4 @@
-import { getPlaylists } from '../resources'
+
 import { useNavigate } from 'react-router'
 
 const PlaylistCard = ({ playlists }) => {
@@ -16,7 +16,7 @@ const PlaylistCard = ({ playlists }) => {
         >
           <div className="playlistsLeft">
             {playlist.images.length ? (
-              <img src={playlist.images[0].url} />
+              <img src={playlist.images[0].url} alt="playlistimage" />
             ) : null}
           </div>
           <div className="playlistsRight">
