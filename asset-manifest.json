@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Cantabile/static/css/main.61fe4ab2.css",
+    "main.js": "/Cantabile/static/js/main.a5b5d523.js",
+    "static/js/787.9078bc56.chunk.js": "/Cantabile/static/js/787.9078bc56.chunk.js",
+    "index.html": "/Cantabile/index.html",
+    "main.61fe4ab2.css.map": "/Cantabile/static/css/main.61fe4ab2.css.map",
+    "main.a5b5d523.js.map": "/Cantabile/static/js/main.a5b5d523.js.map",
+    "787.9078bc56.chunk.js.map": "/Cantabile/static/js/787.9078bc56.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61fe4ab2.css",
+    "static/js/main.a5b5d523.js"
+  ]
+}
