@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     setToken(localStorage.getItem('token'))
-  }, [])
+  }, [token])
 
   return (
     <div className="App">
