@@ -29,7 +29,7 @@ jobs:
     - run: npm i
     - run: npm run build --if-present
       env:
-        CI: ""
+        CI: false
     - run: npm test
 
     - name: Deployment with gh-pages
