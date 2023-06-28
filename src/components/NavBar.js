@@ -4,24 +4,28 @@ import { useState } from 'react'
 import { getUserProfile } from '../resources'
 
 const NavBar = () => {
-  // const [token, setToken] = useState('')
+  const [token, setToken] = useState('')
   const [user, setUser] = useState([])
 
-// console.log(token)
+console.log(token)
 
-  // let navigate = useNavigate()
+  useEffect(() => {
+    setToken(window.localStorage.getItem('token'))
+  }, [token])
 
-  // const logout = () => {
-  //   setToken('')
-  //   window.localStorage.removeItem('token')
-  //   navigate('/')
-  // }
+  let navigate = useNavigate()
+
+  const logout = () => {
+    setToken('')
+    window.localStorage.removeItem('token')
+    navigate('/')
+  }
 
   useEffect(() => {
     getUserProfile(setUser)
   }, [])
 
-  return (
+  return ( token ?
     <div className="navbar">
       <h2 className="nav">{user.display_name}</h2>
       <NavLink
@@ -53,7 +57,7 @@ const NavBar = () => {
         Create Playlist
       </NavLink>
     </div>
-  )
+  : null)
 }
 
 export default NavBar

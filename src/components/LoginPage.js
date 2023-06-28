@@ -18,12 +18,12 @@ const Login = () => {
     setToken(urlSearch.get('access_token'))
     window.localStorage.setItem('token', token)
     console.log(token)
-  }, [token, urlSearch])
+  }, [token])
 
-  // const logout = () => {
-  //   setToken('')
-  //   window.localStorage.removeItem('token')
-  // }
+  const logout = () => {
+    setToken('')
+    window.localStorage.removeItem('token')
+  }
 
   let navigate = useNavigate('')
   const redirect = () => {
