@@ -6,12 +6,13 @@ describe("testing genre mapping method", () =>{
     it("should show each genre respectfully", () => {
         let genres = ['rap','rock','metal'
         ]
-        render(<GenreCard genres={genres}/>)
-        expect(genres[0]).toBe('rap')
-        expect(genres[1]).toBe('rock')
+        const {getByText } = render(<GenreCard genres={genres}/>)
+        expect(getByText(/rap/i)).toBeInTheDocument()
+        expect(getByText(/rock/i)).toBeInTheDocument()
     })
     it("should show nothing if no artists", () => {
-        render(<GenreCard/>)
-        expect(null)
+        let genres = null
+        const element = render(<GenreCard genres={genres}/>)
+        expect(element.genres).toBe(undefined)
     })
 })

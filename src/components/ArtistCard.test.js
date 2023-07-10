@@ -12,12 +12,12 @@ describe("testing artist mapping method", () =>{
             images: '2ndimage.png'
         }
         ]
-        render(<ArtistCard artists={artists}/>)
-        expect(artists[0].name).toBe('drake')
-        expect(artists[1].images).toBe('2ndimage.png')
+        const { getByText} = render(<ArtistCard artists={artists}/>)
+        expect(getByText(/drake/i)).toBeInTheDocument()
     })
     it("should show nothing if no artists", () => {
-        render(<ArtistCard/>)
-        expect(null)
+        let artists=null
+        let element = render(<ArtistCard artists={artists}/>)
+        expect(element.artists).toBe(undefined)
     })
 })
