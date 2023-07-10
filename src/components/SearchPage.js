@@ -49,7 +49,7 @@ const SearchPage = () => {
             value={search}
             placeholder="Search"
             onChange={onChange}
-          ></input>
+          >search</input>
           <button className="searchbutton" type="submit"></button>
         </form>
         <h1>Top Result</h1>

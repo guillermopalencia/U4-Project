@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Home from '../src/components/HomePage';
 
 describe('has content', () => {
   it('App exists', () => {
