@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cantabile/static/css/main.61fe4ab2.css",
-    "main.js": "/Cantabile/static/js/main.8af52e82.js",
+    "main.js": "/Cantabile/static/js/main.5703a9ce.js",
     "static/js/787.9078bc56.chunk.js": "/Cantabile/static/js/787.9078bc56.chunk.js",
     "index.html": "/Cantabile/index.html",
     "main.61fe4ab2.css.map": "/Cantabile/static/css/main.61fe4ab2.css.map",
-    "main.8af52e82.js.map": "/Cantabile/static/js/main.8af52e82.js.map",
+    "main.5703a9ce.js.map": "/Cantabile/static/js/main.5703a9ce.js.map",
     "787.9078bc56.chunk.js.map": "/Cantabile/static/js/787.9078bc56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61fe4ab2.css",
-    "static/js/main.8af52e82.js"
+    "static/js/main.5703a9ce.js"
   ]
 }
