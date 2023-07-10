@@ -18,7 +18,7 @@ const ArtistCard = ({ artists }) => {
       ))
     : null
 
-  return <div>{artistList[0]}</div>
+  return artistList ? <div>{artistList[0]}</div> : null
 }
 
 export default ArtistCard
