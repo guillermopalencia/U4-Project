@@ -1,13 +1,13 @@
 import { getByRole, render, screen, cleanup } from '@testing-library/react';
-import { clean } from 'gh-pages';
+import renderer  from 'react-test-renderer'
 import TestThis from './TestComponent';
 
 afterEach(() => {
     cleanup()
 });
 
-describe("Home Component Render Test", () =>{
-    it("should render Home component", () => {
+describe("Test Component Render Test", () =>{
+    it("should render Test component", () => {
       const { getByRole } = render(<TestThis />)
       expect(getByRole('heading', {hidden: true})).toBeInTheDocument();
     })
@@ -18,3 +18,12 @@ describe("Home Component Render Test", () =>{
       expect(element('textbox', {hidden: true})).toBeInTheDocument()
     })
   })
+
+describe("Snapshot testing", () => {
+  it("Should match exisiting snapshot", () => {
+    const element = renderer.create(<TestThis />)
+
+    let checker = element.toJSON
+    expect(checker).toMatchSnapshot()
+  })
+})
