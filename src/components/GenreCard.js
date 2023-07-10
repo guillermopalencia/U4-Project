@@ -8,8 +8,8 @@ const GenreCard = ({ genres }) => {
         </div>
       ))
     : null
-  genreList.slice(0, 20)
-  return <div>{genreList.slice(0, 20)}</div>
+  genreList ? genreList.slice(0, 20) : null
+  return genreList ? <div>{genreList.slice(0, 20)}</div> : null
 }
 
 export default GenreCard
