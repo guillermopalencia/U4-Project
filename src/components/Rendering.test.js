@@ -23,7 +23,7 @@ describe("Snapshot testing", () => {
   it("Should match exisiting snapshot", () => {
     const element = renderer.create(<TestThis />)
 
-    let checker = element.toJSON
-    expect(checker).toMatchSnapshot()
+    let tree = element.toJSON
+    expect(tree).toMatchSnapshot()
   })
 })
